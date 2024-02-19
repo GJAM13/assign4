@@ -10,18 +10,20 @@
       {
         "type": "googlecompute",
         "project_id": "{{user `project_id`}}",
-        "source_image_family": "centos-7",
+        "source_image_family": "centos-8",
         "source_image_project_id": "centos-cloud",
-        "zone": "us-central1-a",
+        "zone": "{{user `zone`}}",
         "ssh_username": "centos",
         "machine_type": "e2-standard-2",
         "disk_size": 20,
         "disk_type": "pd-standard",
-        "network_project_id": "japangor",
+        "network_project_id": "{{user `project_id`}}",
         "subnetwork": "projects/{{user `project_id`}}/regions/us-central1/subnetworks/webapp",
-        "tags": ["packer", "http-server", "https-server"]
+        "tags": ["packer", "http-server", "https-server"],
+        "service_account_json": "{{user `service_account_json`}}"
       }
     ],
+    
     "provisioners": [
       {
         "type": "shell",
