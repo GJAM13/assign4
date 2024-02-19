@@ -59,6 +59,7 @@ jobs:
         with:
           terraform_version: "0.12.x"
       - name: Terraform Init and Apply
+      
         run: |
           cd terraform
           terraform init
