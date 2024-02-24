@@ -13,4 +13,4 @@ jobs:
       - name: Validate Packer Template
         run: |
           cd packer
-          packer validate packer.json
+          packer validate template.json
