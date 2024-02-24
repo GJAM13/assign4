@@ -20,4 +20,4 @@ jobs:
     - name: Build Packer Image
       run: |
         cd packer
-        packer build packer.json
+        packer build template.json
