@@ -7,8 +7,8 @@
       {
         "type": "googlecompute",
         "project_id": "{{user `project_id`}}",
-        "source_image_family": "centos-8",
-        "source_image_project_id": "centos-cloud",
+        "source_image_family": "centos-stream-8",
+      "source_image_project_id": "centos-cloud",
         "zone": "{{user `zone`}}",
         "ssh_username": "centos",
         "machine_type": "e2-standard-2",
